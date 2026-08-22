@@ -1,0 +1,49 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            yrobf9r7qi064nvhtg3cfgstfvz0s6md:
+                codePath: nemo-fraud-detection/notebooks/00_setup_and_verification.ipynb
+                cpu_count: 2
+                cpu_count_logical: 4
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "536608768000"
+                        used: "287336345600"
+                email: lohmann.daniel@pm.me
+                executable: /usr/bin/python
+                gpu: NVIDIA L40S
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "48305799168"
+                      name: NVIDIA L40S
+                      uuid: GPU-b36642b0-d873-8556-c2ef-a3f8e736989d
+                host: d6cd3049335c
+                memory:
+                    total: "33176997888"
+                os: Linux-6.8.0-1052-aws-x86_64-with-glibc2.35
+                program: nemo-fraud-detection/notebooks/00_setup_and_verification.ipynb
+                python: CPython 3.10.12
+                root: /data/nemo-fraud-detection/notebooks
+                startedAt: "2026-08-22T12:49:52.770215Z"
+                writerId: yrobf9r7qi064nvhtg3cfgstfvz0s6md
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+            "4": 3.10.12
+            "5": 0.28.2
+            "8":
+                - 1
+            "10":
+                - 20
+            "12": 0.28.2
+            "13": linux-x86_64

@@ -1,0 +1,53 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            nevm3e4dqifyxs8hqk9rusx54n0n87ol:
+                codePath: nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb
+                cpu_count: 2
+                cpu_count_logical: 4
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "536608768000"
+                        used: "263238770688"
+                email: lohmann.daniel@pm.me
+                executable: /usr/bin/python
+                gpu: NVIDIA L40S
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "48305799168"
+                      name: NVIDIA L40S
+                      uuid: GPU-b36642b0-d873-8556-c2ef-a3f8e736989d
+                host: d6cd3049335c
+                memory:
+                    total: "33176997888"
+                os: Linux-6.8.0-1052-aws-x86_64-with-glibc2.35
+                program: nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb
+                python: CPython 3.10.12
+                root: /data/nemo-fraud-detection/notebooks/04_FineTuning
+                startedAt: "2026-08-22T15:56:23.845188Z"
+                writerId: nevm3e4dqifyxs8hqk9rusx54n0n87ol
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 13
+                - 78
+            "4": 3.10.12
+            "5": 0.28.2
+            "8":
+                - 1
+            "12": 0.28.2
+            "13": linux-x86_64

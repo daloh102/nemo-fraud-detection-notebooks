@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'dcgm-exporter'
+    static_configs:
+      - targets: ['dcgm-exporter:9400']
+
+  - job_name: 'nim-llama3'
+    static_configs:
+      - targets: ['nim-llama3:8000']

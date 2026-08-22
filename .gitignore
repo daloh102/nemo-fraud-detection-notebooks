@@ -1,0 +1,16 @@
+hf-cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generierte Daten & Reports
+*.jsonl
+nemo_analysis_output/
+nemo_sem_cache/
+
+# Trainings-Checkpoints und Logs (verhindert Permission-Fehler)
+nemo_experiments/
+checkpoints/
+*.ckpt
+*.pt
+*.safetensors
