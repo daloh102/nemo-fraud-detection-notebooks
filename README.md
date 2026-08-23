@@ -1,4 +1,4 @@
-readme_content = """# 🚀 NeMo Fraud Detection & LLM Lifecycle Platform
+🚀 NeMo Fraud Detection & LLM Lifecycle Platform
 
 A comprehensive, production-grade MLOps repository for synthetic data generation, semantic curation, high-performance inference monitoring, and fine-tuning specialized LLMs (such as Llama-3-8B) for automated fraud detection tasks.
 
