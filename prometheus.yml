@@ -5,7 +5,16 @@ scrape_configs:
   - job_name: 'dcgm-exporter'
     static_configs:
       - targets: ['dcgm-exporter:9400']
-
+  
   - job_name: 'nim-llama3'
+    metrics_path: '/v1/metrics'
     static_configs:
       - targets: ['nim-llama3:8000']
+  
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']

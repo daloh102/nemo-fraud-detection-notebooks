@@ -7,6 +7,7 @@ networks:
 services:
   nemo:
     build: .
+    image: nemo-fraud-24.09:latest
     container_name: nemo-24.09
     networks:
       - fraud-net
@@ -98,7 +99,7 @@ services:
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     
-
+  
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -108,6 +109,33 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    networks:
+      - fraud-net   
+    restart: unless-stopped
+    
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    restart: unless-stopped
+    ports:
+      - "9100:9100"
+    command:
+      - '--path.rootfs=/host'
+    volumes:
+      - /:/host:ro,rslave
+    networks:
+      - fraud-net
 
 volumes:
   grafana-data:
