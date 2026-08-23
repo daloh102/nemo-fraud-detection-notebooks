@@ -1,19 +1,34 @@
-# 📓 Notebooks & Execution Pipeline
+readme_content = """# 🚀 NeMo Fraud Detection & LLM Lifecycle Platform
 
-Dieser Ordner bündelt alle interaktiven Jupyter-Notebooks für die vollständige End-to-End-Pipeline des Fraud-Detection-Projekts. Für einen reibungslosen Ablauf wird empfohlen, die Notebooks in der chronologischen Reihenfolge auszuführen.
-
----
-
-## 🧭 Pipeline-Struktur & Ablauf
-
-| Schritt | Notebook | Beschreibung & Kernaufgaben |
-| :--- | :--- | :--- |
-| **01** | `01_Data_Curation.ipynb` | Bereinigung, Vorverarbeitung und Formatierung der Rohdaten in das benötigte SFT-Format. |
-| **02** | `02_FineTuning.ipynb` | Durchführung des PEFT/LoRA-Trainings über das Megatron/NeMo-Framework auf den GPUs. |
-| **03** | `03_Evaluation_and_Wandb.ipynb` | Checkpoint-Handling, echte Modell-Inferenz auf Validierungsdaten sowie W&B-Logging. |
-| **04** | `04_Monitoring_Dashboard.ipynb` | Infrastruktur-Management zur Prüfung von Prometheus, Grafana & DCGM-GPU-Exporter. |
+A comprehensive, production-grade MLOps repository for synthetic data generation, semantic curation, high-performance inference monitoring, and fine-tuning specialized LLMs (such as Llama-3-8B) for automated fraud detection tasks.
 
 ---
 
-> **💡 Wichtiger Hinweis für die Ausführung:** 
-> Stelle vor dem Start der Inferenz- und Monitoring-Notebooks sicher, dass sich deine Container im selben Docker-Netzwerk befinden und die entsprechenden Ports erreichbar sind.
+## 📌 Project Overview
+
+This repository provides an end-to-end blueprint for developing and monitoring custom-tailored LLM solutions. It bridges the gap between raw data generation via local NVIDIA NIM inference and rigorous hardware/pipeline observability using **Prometheus** and **Grafana**.
+
+### 🌟 Key Highlights & Ready-to-Use Artifacts
+- **Pre-Generated Dataset Included:** Don't wait for hours of synthesis—you can use the included high-quality transcripts dataset (`transcripts.jsonl`) to **immediately start fine-tuning** your models or run variance analyses right out of the box.
+- **Advanced Monitoring & Observability:** Out-of-the-box integration for GPU metrics (DCGM), host infrastructure (Node Exporter), container performance (cAdvisor), and LLM throughput/latency (NVIDIA NIM/vLLM).
+- **Structured LLM Lifecycle:** Clear separation between data generation, curation, training, and evaluation phases.
+
+---
+
+## 📂 Repository Structure
+
+```text
+nemo-fraud-detection-notebooks/
+│
+├── Grafana/                 # Pre-configured dashboard exports and layouts
+├── notebooks/               # Jupyter notebooks for data generation, analysis & curation
+    └── 01_Data_Generation/  # Contains generation scripts and transcripts data
+    └── 02_Data_Curation/    # Contains scripts for Data generation
+    └── 03_Evaluation/       # Contains scripts for Evaluation
+    └── 04_Finetuning/       # Contains scripts for Finetuning
+    └── 05_Monitoring/       # Contains Healthcheck for Prometheus and Grafana
+├── 00_Setup_Enviroment.ipynb# Environment configuration and dependency checks
+├── Dockerfile               # Custom container definition for development/runtime
+├── docker-compose.yml       # Orchestration file (NIM, Prometheus, Grafana, Node-Exporter, cAdvisor)
+├── prometheus.yml           # Prometheus scraping targets configuration
+└── README.md                # Project documentation
