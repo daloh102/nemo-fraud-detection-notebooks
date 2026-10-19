@@ -1,0 +1,14 @@
+🚀 Starte faire Chat-Baseline-Evaluierung...
+
+Eintrag 1 | Erwartet: legitimate | Erkannt: legitimate | Korrekt: True
+Eintrag 2 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 3 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 4 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 5 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 6 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 7 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 8 | Erwartet: legitimate | Erkannt: fraud | Korrekt: False
+Eintrag 9 | Erwartet: legitimate | Erkannt: legitimate | Korrekt: True
+Eintrag 10 | Erwartet: legitimate | Erkannt: legitimate | Korrekt: True
+Eintrag 11 | Erwartet: legitimate | Erkannt: legitimate | Korrekt: True
+Eintrag 12 | Erwartet: legitimate | Erkannt: legitimate | Korrekt: True

@@ -1,0 +1,35 @@
+{
+  "os": "Linux-6.8.0-1052-aws-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2026-08-22T16:16:34.339500Z",
+  "program": "nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb",
+  "codePath": "nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb",
+  "email": "lohmann.daniel@pm.me",
+  "root": "/data/nemo-fraud-detection/notebooks/04_FineTuning",
+  "host": "d6cd3049335c",
+  "executable": "/usr/bin/python",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "gpu": "NVIDIA L40S",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "536608768000",
+      "used": "269675888640"
+    }
+  },
+  "memory": {
+    "total": "33176997888"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada",
+      "uuid": "GPU-b36642b0-d873-8556-c2ef-a3f8e736989d"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "2gvc1scuj0y0vu6gjnj9dcudv3wlxqq6"
+}

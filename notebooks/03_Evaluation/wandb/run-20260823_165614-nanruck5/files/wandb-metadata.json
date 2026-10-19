@@ -1,0 +1,35 @@
+{
+  "os": "Linux-6.8.0-1052-aws-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2026-08-23T16:56:14.981573Z",
+  "program": "nemo-fraud-detection-notebooks/notebooks/03_Evaluation/01_Evaluate_Baseline.ipynb",
+  "codePath": "nemo-fraud-detection-notebooks/notebooks/03_Evaluation/01_Evaluate_Baseline.ipynb",
+  "email": "lohmann.daniel@pm.me",
+  "root": "/data/nemo-fraud-detection-notebooks/notebooks/03_Evaluation",
+  "host": "0299d2045d58",
+  "executable": "/usr/bin/python",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "gpu": "NVIDIA L40S",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "536608768000",
+      "used": "216635637760"
+    }
+  },
+  "memory": {
+    "total": "33176997888"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada",
+      "uuid": "GPU-dbe06b1c-1d64-5863-be90-821d6419ce8b"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "7zh05bgxd82p46urbc5uc8jyagjyi4lt"
+}
