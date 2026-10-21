@@ -1,19 +1,19 @@
 general:
   output:
-    dir: "/data/nemo-fraud-detection/data/evaluation/results"
+    dir: "/data/nemo-fraud-detection-notebooks/notebooks/03_Evaluation/data/evaluation_results"
 
 llms:
   nim_llm:
-    _type: "openai" # Da der NIM-Container ein OpenAI-kompatibles API bereitstellt
+    _type: "openai" # the NIM container exposes an OpenAI-compatible API
     model_name: "meta/llama-3.1-8b-instruct"
-    api_base: "http://localhost:8000/v1"
-    api_key: "not-needed"
+    api_base: "http://nim-llama3:8000/v1"
+    api_key: "not-needed" # NIM ignores the key; the client library requires one
     temperature: 0.0
 
 dataset:
   _type: "jsonl"
-  file_path: "/data/nemo-fraud-detection/data/sft/validation_new.jsonl"
-  # Mappt deine JSONL-Felder auf die Standard-Eingaben des Evaluators
+  file_path: "/data/nemo-fraud-detection-notebooks/notebooks/02_Data_Curation/data/sft/validation.jsonl"
+  # maps your JSONL fields to the evaluator's standard input/output fields
   input_field: "input"
   output_field: "output"
 
