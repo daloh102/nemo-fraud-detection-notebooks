@@ -1,0 +1,19 @@
+# Installed on top of the nvcr.io/nvidia/nemo:24.09 base image.
+# PyTorch, NeMo and NeMo Curator ship with that image; do not pin them here.
+nemoguardrails==0.23.0
+wandb==0.28.2
+protobuf
+requests==2.32.3
+mlflow==3.15.1
+scikit-learn==1.7.2
+seaborn
+matplotlib==3.9.1
+sentence-transformers==3.2.1
+openai==1.54.3
+pydantic==2.8.2
+python-dotenv==1.0.1
+pandas==2.2.1
+peft==0.13.2
+transformers==4.46.2
+datasets==3.1.0
+PyYAML==6.0.1
