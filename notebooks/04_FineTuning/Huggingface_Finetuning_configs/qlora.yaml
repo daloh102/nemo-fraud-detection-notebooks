@@ -12,7 +12,7 @@ trainer:
 
 model:
   restore_from_path: "meta-llama/Meta-Llama-3.1-8B-Instruct" # <--- hf:// Prefix hinzugefügt
-  save_to: "/data/nemo-fraud-detection/data/evaluation/fraud_detection_qlora"
+  save_to: "/data/nemo-fraud-detection-notebooks/notebooks/04_FineTuning/evaluation/fraud_detection_qlora"
 
   peft:
     peft_scheme: "lora"
