@@ -1,0 +1,18 @@
+{"time":"2026-08-22T12:49:52.777446334Z","level":"INFO","msg":"wandb-core"}
+{"time":"2026-08-22T12:49:52.778711047Z","level":"INFO","msg":"stream: starting","core version":"0.28.2"}
+{"time":"2026-08-22T12:49:52.888682467Z","level":"INFO","msg":"stream: created new stream","id":"qsdn3qtr"}
+{"time":"2026-08-22T12:49:52.888720838Z","level":"INFO","msg":"handler: started"}
+{"time":"2026-08-22T12:49:52.88879625Z","level":"INFO","msg":"stream: started"}
+{"time":"2026-08-22T12:49:52.889652193Z","level":"INFO","msg":"sender: started"}
+{"time":"2026-08-22T12:49:52.889676303Z","level":"INFO","msg":"writer: started","stream_id":"qsdn3qtr"}
+{"time":"2026-08-22T12:49:54.227308406Z","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-08-22T12:49:54.438844616Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-22T12:49:55.001343954Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-08-22T12:49:55.001465737Z","level":"INFO","msg":"filestream: sending request","total_files":1,"uploaded_len":5,"complete":true,"exit_code":0}
+{"time":"2026-08-22T12:49:55.212524764Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-22T12:49:55.215134942Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-08-22T12:49:55.220790809Z","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-08-22T12:49:55.22080221Z","level":"INFO","msg":"handler: closed"}
+{"time":"2026-08-22T12:49:55.220839481Z","level":"INFO","msg":"sender: closed"}
+{"time":"2026-08-22T12:49:55.220847451Z","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-08-22T12:49:57.22130838Z","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: body: too many concurrent telemetry requests context deadline exceeded]"}

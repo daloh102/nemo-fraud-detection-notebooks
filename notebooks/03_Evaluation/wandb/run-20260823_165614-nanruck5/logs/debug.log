@@ -1,0 +1,39 @@
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_setup.py:_flush():81] Current SDK version is 0.28.2
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_setup.py:_flush():81] Configure stats pid to 1227
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /data/nemo-fraud-detection-notebooks/notebooks/03_Evaluation/wandb/run-20260823_165614-nanruck5/logs/debug.log
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /data/nemo-fraud-detection-notebooks/notebooks/03_Evaluation/wandb/run-20260823_165614-nanruck5/logs/debug-internal.log
+2026-08-23 16:56:14,983 INFO    MainThread:1227 [wandb_init.py:monkeypatch_ipython():658] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fe0f059a140>
+2026-08-23 16:56:14,984 INFO    MainThread:1227 [wandb_init.py:init():783] calling init triggers
+2026-08-23 16:56:14,984 INFO    MainThread:1227 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-08-23 16:56:14,984 INFO    MainThread:1227 [wandb_init.py:init():831] starting backend
+2026-08-23 16:56:14,984 INFO    MainThread:1227 [wandb_init.py:init():846] sending inform_init request
+2026-08-23 16:56:15,094 INFO    MainThread:1227 [wandb_init.py:init():851] backend started and connected
+2026-08-23 16:56:15,095 INFO    MainThread:1227 [wandb_run.py:_label_probe_notebook():1290] probe notebook
+2026-08-23 16:56:15,096 INFO    MainThread:1227 [wandb_run.py:_label_probe_notebook():1300] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2026-08-23 16:56:15,096 INFO    MainThread:1227 [wandb_init.py:init():921] updated telemetry
+2026-08-23 16:56:15,099 INFO    MainThread:1227 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-08-23 16:56:15,610 INFO    MainThread:1227 [wandb_init.py:init():981] starting run threads in backend
+2026-08-23 16:56:16,046 INFO    MainThread:1227 [wandb_run.py:_console_start():2626] atexit reg
+2026-08-23 16:56:16,046 INFO    MainThread:1227 [wandb_run.py:_redirect():2476] redirect: wrap_raw
+2026-08-23 16:56:16,046 INFO    MainThread:1227 [wandb_run.py:_redirect():2545] Wrapping output streams.
+2026-08-23 16:56:16,046 INFO    MainThread:1227 [wandb_run.py:_redirect():2568] Redirects installed.
+2026-08-23 16:56:16,049 INFO    MainThread:1227 [wandb_init.py:init():1019] run started, returning control to user process
+2026-08-23 16:56:16,270 INFO    MainThread:1227 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-23 16:57:07,706 INFO    MainThread:1227 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-23 16:57:07,706 INFO    MainThread:1227 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-23 16:57:07,708 INFO    MainThread:1227 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-23 16:57:10,150 INFO    MainThread:1227 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-23 16:57:10,150 INFO    MainThread:1227 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-23 16:57:10,156 INFO    MainThread:1227 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-23 16:57:14,050 INFO    MainThread:1227 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-23 16:57:14,051 INFO    MainThread:1227 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-23 16:57:14,219 INFO    MainThread:1227 [wandb_run.py:_finish():2397] finishing run lohmann-daniel-myself/fraud-detection/nanruck5
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [jupyter.py:save_history():441] not saving jupyter history
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [jupyter.py:save_ipynb():368] not saving jupyter notebook
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [wandb_init.py:_jupyter_teardown():637] cleaning up jupyter logic
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [wandb_run.py:_atexit_cleanup():2593] got exitcode: 0
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [wandb_run.py:_restore():2575] restore
+2026-08-23 16:57:14,220 INFO    MainThread:1227 [wandb_run.py:_restore():2581] restore done
+2026-08-23 16:57:15,050 INFO    MainThread:1227 [wandb_run.py:_footer_sync_info():4025] logging synced files

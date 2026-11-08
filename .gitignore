@@ -3,25 +3,16 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Generated data & reports
+# Generierte Daten & Reports
 *.jsonl
 nemo_analysis_output/
 nemo_sem_cache/
 
-# Training checkpoints and logs (avoids permission errors on re-run)
+# Trainings-Checkpoints und Logs (verhindert Permission-Fehler)
 nemo_experiments/
 checkpoints/
 *.ckpt
 *.pt
 *.safetensors
-
-# Run artifacts (local only, never commit)
-wandb/
-mlflow.db
-mlruns/
-*.md5
-_temp_curator_export/
-dedup_cache/
-dedup_logs/
-
+.env
 .env

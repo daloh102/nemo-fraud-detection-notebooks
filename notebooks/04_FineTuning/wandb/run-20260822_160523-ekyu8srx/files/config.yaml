@@ -1,0 +1,64 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            gmt9ou5dp7yfmgf13h10dt9ojx4g762g:
+                codePath: nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb
+                cpu_count: 2
+                cpu_count_logical: 4
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "536608768000"
+                        used: "263239380992"
+                email: lohmann.daniel@pm.me
+                executable: /usr/bin/python
+                gpu: NVIDIA L40S
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "48305799168"
+                      name: NVIDIA L40S
+                      uuid: GPU-b36642b0-d873-8556-c2ef-a3f8e736989d
+                host: d6cd3049335c
+                memory:
+                    total: "33176997888"
+                os: Linux-6.8.0-1052-aws-x86_64-with-glibc2.35
+                program: nemo-fraud-detection/notebooks/04_FineTuning/01_Megatron_Finetuning.ipynb
+                python: CPython 3.10.12
+                root: /data/nemo-fraud-detection/notebooks/04_FineTuning
+                startedAt: "2026-08-22T16:05:23.663197Z"
+                writerId: gmt9ou5dp7yfmgf13h10dt9ojx4g762g
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 98
+            "3":
+                - 2
+                - 13
+                - 78
+            "4": 3.10.12
+            "5": 0.28.2
+            "6": 4.46.2
+            "8":
+                - 1
+            "12": 0.28.2
+            "13": linux-x86_64
