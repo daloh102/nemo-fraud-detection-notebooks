@@ -64,6 +64,7 @@ services:
               capabilities: [gpu]
     environment:
       - NGC_API_KEY=${NGC_API_KEY}
+    command: ["--max-model-len", "16384"]   # <-- Hier wird die Länge direkt übergeben
     volumes:
       - /opt/dlami/nvme/nim-cache:/opt/nim/.cache
     ports:
@@ -109,6 +110,9 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=password
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest

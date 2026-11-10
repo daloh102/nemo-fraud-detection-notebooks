@@ -1,18 +1,9 @@
-hf-cache/
-__pycache__/
-*.pyc
+# --- W&B, Caches, Logs & Reports ---
+wandb/
+**/wandb/
 .ipynb_checkpoints/
-
-# Generierte Daten & Reports
-*.jsonl
-nemo_analysis_output/
-nemo_sem_cache/
-
-# Trainings-Checkpoints und Logs (verhindert Permission-Fehler)
-nemo_experiments/
-checkpoints/
-*.ckpt
-*.pt
-*.safetensors
-.env
-.env
+**/data/dedup_cache/
+**/data/dedup_logs/
+*.parquet
+*.log
+*.csv
