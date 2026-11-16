@@ -2,53 +2,20 @@
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
-    "name": "ad6rf7n",
+    "name": "ad4vdkg",
     "namespace": "default",
-    "uid": "b2ffab10-704b-4ad2-a993-2f7bd9ca74a0",
-    "resourceVersion": "1787494708866016",
-    "generation": 6,
-    "creationTimestamp": "2026-08-23T14:13:50Z",
-    "labels": {
-      "grafana.app/deprecatedInternalID": "1859122031730688"
-    },
-    "annotations": {
-      "grafana.app/createdBy": "user:dfw1dz6urcsu8d",
-      "grafana.app/saved-from-ui": "Grafana v13.2.0 (f681b1359f)",
-      "grafana.app/updatedBy": "user:dfw1dz6urcsu8d",
-      "grafana.app/updatedTimestamp": "2026-08-23T14:18:28Z"
-    }
+    "uid": "7c076e7d-902c-420a-9544-f28d983e8004"
   },
   "spec": {
-    "annotations": [
-      {
-        "kind": "AnnotationQuery",
-        "spec": {
-          "query": {
-            "kind": "DataQuery",
-            "group": "grafana",
-            "version": "v0",
-            "datasource": {
-              "name": "-- Grafana --"
-            },
-            "spec": {}
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "builtIn": true
-        }
-      }
-    ],
+    "annotations": [],
     "cursorSync": "Off",
-    "description": "Durchsatz & API-Stabilität",
     "editable": true,
     "elements": {
       "panel-1": {
         "kind": "Panel",
         "spec": {
           "id": 1,
-          "title": "Generierte Tokens / Sekunde",
+          "title": "End-to-End Latenz (Request Duration in s)",
           "description": "",
           "links": [],
           "data": {
@@ -63,11 +30,13 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "cfw1f83ymexogc"
+                        "name": "prometheus",
+                        "uid": "prometheus",
+                        "type": "prometheus"
                       },
                       "spec": {
                         "editorMode": "code",
-                        "expr": "rate(vllm:generation_tokens_total[1m])",
+                        "expr": "histogram_quantile(0.95, sum(rate(vllm:e2e_request_latency_seconds_bucket[5m])) by (le))",
                         "legendFormat": "__auto",
                         "range": true
                       }
@@ -162,7 +131,7 @@
         "kind": "Panel",
         "spec": {
           "id": 2,
-          "title": "Aktive parallele Anfragen",
+          "title": "Durchsatz (Requests pro Sekunde)",
           "description": "",
           "links": [],
           "data": {
@@ -177,11 +146,13 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "cfw1f83ymexogc"
+                        "name": "prometheus",
+                        "uid": "prometheus",
+                        "type": "prometheus"
                       },
                       "spec": {
                         "editorMode": "code",
-                        "expr": "vllm:num_requests_running",
+                        "expr": "sum(rate(vllm:request_success_total[1m]))",
                         "legendFormat": "__auto",
                         "range": true
                       }
@@ -271,196 +242,6 @@
             }
           }
         }
-      },
-      "panel-3": {
-        "kind": "Panel",
-        "spec": {
-          "id": 3,
-          "title": "Fehlerquote der API (HTTP Status != 200)",
-          "description": "",
-          "links": [],
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
-                      "datasource": {
-                        "name": "cfw1f83ymexogc"
-                      },
-                      "spec": {
-                        "editorMode": "code",
-                        "expr": "sum(rate(http_requests_total{status=~\"5..|4..\"}[1m])) / sum(rate(http_requests_total[1m]))",
-                        "legendFormat": "__auto",
-                        "range": true
-                      }
-                    },
-                    "refId": "A",
-                    "hidden": false
-                  }
-                }
-              ],
-              "transformations": [],
-              "queryOptions": {}
-            }
-          },
-          "vizConfig": {
-            "kind": "VizConfig",
-            "group": "gauge",
-            "version": "13.2.0",
-            "spec": {
-              "options": {
-                "barShape": "flat",
-                "barWidthFactor": 0.3,
-                "effects": {
-                  "barGlow": false,
-                  "centerGlow": false,
-                  "gradient": true
-                },
-                "endpointMarker": "point",
-                "minVizHeight": 75,
-                "minVizWidth": 75,
-                "orientation": "horizontal",
-                "reduceOptions": {
-                  "calcs": [
-                    "lastNotNull"
-                  ],
-                  "fields": "",
-                  "values": false
-                },
-                "segmentCount": 1,
-                "segmentSpacing": 0.3,
-                "shape": "gauge",
-                "showThresholdLabels": false,
-                "showThresholdMarkers": false,
-                "sizing": "auto",
-                "sparkline": true,
-                "textMode": "auto"
-              },
-              "fieldConfig": {
-                "defaults": {
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": 0,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
-                  "color": {
-                    "mode": "thresholds"
-                  }
-                },
-                "overrides": []
-              }
-            }
-          }
-        }
-      },
-      "panel-4": {
-        "kind": "Panel",
-        "spec": {
-          "id": 4,
-          "title": "GPU-Auslastung (DCGM)",
-          "description": "",
-          "links": [],
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
-                      "datasource": {
-                        "name": "cfw1f83ymexogc"
-                      },
-                      "spec": {
-                        "editorMode": "code",
-                        "expr": "DCGM_FI_DEV_GPU_UTIL{}",
-                        "legendFormat": "__auto",
-                        "range": true
-                      }
-                    },
-                    "refId": "A",
-                    "hidden": false
-                  }
-                }
-              ],
-              "transformations": [],
-              "queryOptions": {}
-            }
-          },
-          "vizConfig": {
-            "kind": "VizConfig",
-            "group": "gauge",
-            "version": "13.2.0",
-            "spec": {
-              "options": {
-                "barShape": "flat",
-                "barWidthFactor": 0.3,
-                "effects": {
-                  "barGlow": false,
-                  "centerGlow": false,
-                  "gradient": true
-                },
-                "endpointMarker": "point",
-                "minVizHeight": 75,
-                "minVizWidth": 75,
-                "orientation": "auto",
-                "reduceOptions": {
-                  "calcs": [
-                    "lastNotNull"
-                  ],
-                  "fields": "",
-                  "values": false
-                },
-                "segmentCount": 1,
-                "segmentSpacing": 0.3,
-                "shape": "gauge",
-                "showThresholdLabels": false,
-                "showThresholdMarkers": false,
-                "sizing": "auto",
-                "sparkline": true,
-                "textMode": "auto"
-              },
-              "fieldConfig": {
-                "defaults": {
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": 0,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
-                  "color": {
-                    "mode": "thresholds"
-                  }
-                },
-                "overrides": []
-              }
-            }
-          }
-        }
       }
     },
     "layout": {
@@ -472,19 +253,6 @@
             "spec": {
               "x": 0,
               "y": 0,
-              "width": 24,
-              "height": 8,
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-4"
-              }
-            }
-          },
-          {
-            "kind": "GridLayoutItem",
-            "spec": {
-              "x": 0,
-              "y": 8,
               "width": 12,
               "height": 8,
               "element": {
@@ -497,7 +265,7 @@
             "kind": "GridLayoutItem",
             "spec": {
               "x": 12,
-              "y": 8,
+              "y": 0,
               "width": 12,
               "height": 8,
               "element": {
@@ -505,32 +273,19 @@
                 "name": "panel-2"
               }
             }
-          },
-          {
-            "kind": "GridLayoutItem",
-            "spec": {
-              "x": 0,
-              "y": 16,
-              "width": 12,
-              "height": 8,
-              "element": {
-                "kind": "ElementReference",
-                "name": "panel-3"
-              }
-            }
           }
         ]
       }
     },
     "links": [],
-    "liveNow": false,
+    "liveNow": true,
     "preload": false,
     "tags": [],
     "timeSettings": {
       "timezone": "browser",
-      "from": "now-6h",
+      "from": "now-30m",
       "to": "now",
-      "autoRefresh": "",
+      "autoRefresh": "5s",
       "autoRefreshIntervals": [
         "5s",
         "10s",
@@ -546,15 +301,7 @@
       "hideTimepicker": false,
       "fiscalYearStartMonth": 0
     },
-    "title": "01_Data Generation",
-    "variables": [],
-    "preferences": {
-      "layout": {
-        "kind": "GridLayout",
-        "spec": {
-          "items": []
-        }
-      }
-    }
+    "title": "03_Evaluation",
+    "variables": []
   }
 }
