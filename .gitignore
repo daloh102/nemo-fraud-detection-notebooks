@@ -7,3 +7,9 @@ wandb/
 *.parquet
 *.log
 *.csv
+
+# Lokale Daten- und Experiment-Logs
+data/
+**/data/
+wandb/
+**/wandb/
